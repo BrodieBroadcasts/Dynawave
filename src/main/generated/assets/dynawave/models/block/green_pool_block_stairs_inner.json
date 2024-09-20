@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "dynawave:block/green_pool_block",
+    "side": "dynawave:block/green_pool_block",
+    "top": "dynawave:block/green_pool_block"
+  }
+}

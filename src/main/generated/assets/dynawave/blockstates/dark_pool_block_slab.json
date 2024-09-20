@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dynawave:block/dark_pool_block_slab"
+    },
+    "type=double": {
+      "model": "dynawave:block/dark_pool_block"
+    },
+    "type=top": {
+      "model": "dynawave:block/dark_pool_block_slab_top"
+    }
+  }
+}

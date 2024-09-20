@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "checkpoint=0": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=1": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=2": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=3": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=4": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=5": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=6": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=7": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=8": {
+      "model": "dynawave:block/starting_line_block"
+    },
+    "checkpoint=9": {
+      "model": "dynawave:block/starting_line_block"
+    }
+  }
+}

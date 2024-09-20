@@ -1,5 +1,6 @@
 package blueprint.dynawave.init;
 
+import blueprint.dynawave.block.StartingLineBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -82,6 +83,11 @@ public class ModBlocks {
     public static final Block RED_POOL_BLOCK_WALLS = register(
             new WallBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.CORAL)),
             "red_pool_block_walls", true
+    );
+
+    public static final Block STARTING_LINE_BLOCK = register(
+            new StartingLineBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANVIL)),
+            "starting_line_block", true
     );
 
     public static Block register(Block block, String name, boolean shouldRegisterItem) {

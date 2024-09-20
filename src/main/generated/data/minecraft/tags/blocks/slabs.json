@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "dynawave:pool_block_slab",
+    "dynawave:dark_pool_block_slab",
+    "dynawave:green_pool_block_slab",
+    "dynawave:red_pool_block_slab"
+  ]
+}

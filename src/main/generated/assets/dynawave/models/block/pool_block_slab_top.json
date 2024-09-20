@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "dynawave:block/pool_block",
+    "side": "dynawave:block/pool_block",
+    "top": "dynawave:block/pool_block"
+  }
+}

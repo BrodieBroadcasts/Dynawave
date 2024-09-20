@@ -56,6 +56,8 @@ public class ModItems {
 
             itemGroup.add(ModBlocks.POOL_GRID);
 
+            itemGroup.add(ModBlocks.STARTING_LINE_BLOCK);
+
             itemGroup.add(ModItems.POOL_NOODLE);
         });
     }

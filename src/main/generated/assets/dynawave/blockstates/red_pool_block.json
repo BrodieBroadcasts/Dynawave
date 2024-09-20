@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dynawave:block/red_pool_block"
+    }
+  }
+}
