@@ -13,6 +13,8 @@ public class Dynawave implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// Wipeout inspired mod initialization
+
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.initialize();
