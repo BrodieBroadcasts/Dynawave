@@ -1,6 +1,27 @@
 {
   "block.dynawave.pool_block": "Pool Block",
+  "block.dynawave.pool_block_slab": "Pool Block Slab",
+  "block.dynawave.pool_block_stairs": "Pool Block Stairs",
+  "block.dynawave.pool_block_walls": "Pool Block Wall",
+
   "block.dynawave.dark_pool_block": "Dark Pool Block",
+  "block.dynawave.dark_pool_block_slab": "Dark Pool Block Slab",
+  "block.dynawave.dark_pool_block_stairs": "Dark Pool Block Stairs",
+  "block.dynawave.dark_pool_block_walls": "Dark Pool Block Wall",
+
   "block.dynawave.green_pool_block": "Green Pool Block",
-  "block.dynawave.pool_grid": "Pool Grid"
+  "block.dynawave.green_pool_block_slab": "Green Pool Block Slab",
+  "block.dynawave.green_pool_block_stairs": "Green Pool Block Stairs",
+  "block.dynawave.green_pool_block_walls": "Green Pool Block Wall",
+
+  "block.dynawave.red_pool_block": "Red Pool Block",
+  "block.dynawave.red_pool_block_slab": "Red Pool Block Slab",
+  "block.dynawave.red_pool_block_stairs": "Red Pool Block Stairs",
+  "block.dynawave.red_pool_block_walls": "Red Pool Block Wall",
+
+  "block.dynawave.pool_grid": "Pool Grid",
+
+  "item.dynawave.pool_noodle": "Pool Noodle",
+
+  "itemGroup.dynawave": "Dynawave Group"
 }
