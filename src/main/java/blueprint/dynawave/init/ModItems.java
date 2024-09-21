@@ -1,5 +1,6 @@
 package blueprint.dynawave.init;
 
+import blueprint.dynawave.item.PoolNoodleItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -16,7 +17,7 @@ import static blueprint.dynawave.Dynawave.MOD_ID;
 
 public class ModItems {
     public static final Item POOL_NOODLE = register(
-            new Item(new FabricItemSettings().maxCount(1)),
+            new PoolNoodleItem(new FabricItemSettings().maxCount(1)),
             "pool_noodle"
     );
 
