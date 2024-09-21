@@ -1,5 +1,7 @@
 package blueprint.dynawave;
 
+import blueprint.dynawave.command.KillBarCommand;
+import blueprint.dynawave.command.SpinningBarCommand;
 import blueprint.dynawave.init.ModBlocks;
 import blueprint.dynawave.init.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -17,5 +19,8 @@ public class Dynawave implements ModInitializer {
 
 		ModItems.initialize();
 		ModBlocks.initialize();
+
+		SpinningBarCommand.register();
+		KillBarCommand.register();
 	}
 }
