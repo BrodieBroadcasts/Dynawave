@@ -27,5 +27,7 @@
 
   "item.dynawave.pool_noodle": "Pool Noodle",
 
-  "itemGroup.dynawave": "Dynawave Group"
+  "itemGroup.dynawave": "Dynawave Group",
+
+  "item.blueprint.dynawave.item.pool_noodle.tooltip": "§7Attack the enemies with the pool noodle!"
 }

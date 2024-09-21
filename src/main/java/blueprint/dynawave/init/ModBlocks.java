@@ -100,11 +100,13 @@ public class ModBlocks {
         // Register the block and its item
         Identifier id = new Identifier(MOD_ID, name);
 
-        if(shouldRegisterItem) {
+        if (shouldRegisterItem) {
             BlockItem blockItem = new BlockItem(block, new Item.Settings());
             Registry.register(Registries.ITEM, id, blockItem);
         }
         return Registry.register(Registries.BLOCK, id, block);
     }
-    public static void initialize() {}
+
+    public static void initialize() {
+    }
 }
