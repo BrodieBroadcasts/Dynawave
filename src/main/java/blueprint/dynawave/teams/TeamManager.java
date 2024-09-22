@@ -3,6 +3,7 @@ package blueprint.dynawave.teams;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import net.minecraft.command.argument.EntityArgumentType;
+import net.minecraft.network.packet.s2c.play.PlayerListHeaderS2CPacket;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.server.MinecraftServer;
@@ -111,8 +112,9 @@ public class TeamManager {
             player.sendMessage(Text.literal("You have been assigned to " + team.getDisplayName().getString()), false);
         }
 
-        // Update the tab list
-        updateTabList(server, numTeams);
+        // Update tab list after assigning teams
+        updateTabListWithTeams(server, numTeams);
+        updateTabListHeaderFooter(server);  // Set the header/footer
     }
 
     // Clear old teams
@@ -129,34 +131,53 @@ public class TeamManager {
         server.getPlayerManager().broadcast(Text.literal("All teams have been cleared."), false);  // Notify players
     }
 
-    // Update the tab list to show teams
-    private static void updateTabList(MinecraftServer server, int numTeams) {
+    public static void updateTabListWithTeams(MinecraftServer server, int numTeams) {
         Scoreboard scoreboard = server.getScoreboard();
-        String[] teamNames = {"Team Blue", "Team Red", "Team Yellow", "Team Green"};
-        String[] teamColors = {"§9", "§c", "§e", "§a"}; // Color codes for blue, red, yellow, and green
+        String[] teamNames = {"Blue", "Red", "Yellow", "Green"}; // Team names without "Team"
+        String[] teamColors = {"§9", "§c", "§e", "§a"}; // Color codes for blue, red, yellow, green
 
-        // Clear any existing display names to prevent conflicts
-        for (ServerPlayerEntity player : registeredPlayers) {
-            player.setCustomName(null);
-            player.setCustomNameVisible(false);
-        }
-
-        // Set display names based on team and broadcast team headers
+        // Loop through each team and update the tab list
         for (int i = 0; i < numTeams; i++) {
             Team team = scoreboard.getTeam(teamNames[i]);
             if (team != null) {
-                // Optionally, you can send a broadcast message to announce team names
-                server.getPlayerManager().broadcast(Text.literal(teamColors[i] + teamNames[i]), false);
-
                 for (String playerName : team.getPlayerList()) {
                     ServerPlayerEntity player = server.getPlayerManager().getPlayer(playerName);
                     if (player != null) {
-                        // Set display name in tab list to include team color
-                        player.setCustomName(Text.literal(teamColors[i] + player.getName().getString()));
+                        // Set the player's custom display name to TEAMNAME|PLAYERNAME
+                        String displayName = teamNames[i] + " | " + player.getName().getString();
+                        player.setCustomName(Text.literal(teamColors[i] + displayName));
                         player.setCustomNameVisible(true); // Show custom name in tab list
                     }
                 }
             }
+        }
+    }
+
+    // Helper function to check if a player is in any team
+    private static boolean isPlayerInAnyTeam(ServerPlayerEntity player, Scoreboard scoreboard) {
+        for (Team team : scoreboard.getTeams()) {
+            if (team.getPlayerList().contains(player.getName().getString())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // Method to update tab list with custom header and footer
+    private static void updateTabListHeaderFooter(MinecraftServer server) {
+        Text header = Text.literal("§lDynawave Teams").formatted(Formatting.BOLD, Formatting.AQUA); // Set the header
+        Text footer = Text.literal(""); // No footer in this case
+
+        // Send header and footer to each player
+        for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+            player.networkHandler.sendPacket(new PlayerListHeaderS2CPacket(header, footer));
+        }
+    }
+
+    // Send packets to all players to ensure tab list is updated
+    private static void refreshTabList(MinecraftServer server) {
+        for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+            player.networkHandler.sendPacket(new PlayerListHeaderS2CPacket(
+                    Text.literal("Dynawave Teams"), Text.empty()));  // Header with no footer
         }
     }
 }
