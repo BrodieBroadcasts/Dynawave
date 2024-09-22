@@ -49,7 +49,7 @@ public class SpinningEntityRenderer extends EntityRenderer<SpinningBarEntity> {
         // Apply rotation
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(entity.getYaw() + tickDelta * entity.getRotationSpeed()));
 
-        // Render the custom model
+        // Ren der the custom model
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(getTexture(entity)));
         this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
 
