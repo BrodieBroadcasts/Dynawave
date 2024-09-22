@@ -12,6 +12,7 @@ public class KillBarCommand {
     public static void register() {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
                 CommandManager.literal("killbar")
+                        .requires(source -> source.hasPermissionLevel(2))
                         .executes(context -> {
                             ServerWorld world = context.getSource().getWorld();
 

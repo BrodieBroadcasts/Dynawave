@@ -12,6 +12,7 @@ public class SpinningBarCommand {
     public static void register() {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
                 CommandManager.literal("spawnbar")
+                        .requires(source -> source.hasPermissionLevel(2))
                         .then(CommandManager.argument("rotationSpeed", FloatArgumentType.floatArg())
                                 .then(CommandManager.argument("size", FloatArgumentType.floatArg())
                                         .executes(context -> {
