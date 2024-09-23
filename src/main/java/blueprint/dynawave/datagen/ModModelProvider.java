@@ -34,6 +34,8 @@ public class ModModelProvider extends FabricModelProvider {
         redPoolBlockPool.wall(ModBlocks.RED_POOL_BLOCK_WALLS);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POOL_GRID);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JUMP_BLOCK);
     }
 
     @Override

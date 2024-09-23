@@ -1,6 +1,7 @@
 package blueprint.dynawave.init;
 
 import blueprint.dynawave.block.GeyserBlock;
+import blueprint.dynawave.block.JumpBlock;
 import blueprint.dynawave.block.StartingLineBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -89,6 +90,11 @@ public class ModBlocks {
     public static final Block STARTING_LINE_BLOCK = register(
             new StartingLineBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANVIL)),
             "starting_line_block", true
+    );
+
+    public static final Block JUMP_BLOCK = register(
+            new JumpBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.SLIME)),
+            "jump_block", true
     );
 
     public static final Block GEYSER = register(

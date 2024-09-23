@@ -59,6 +59,8 @@ public class ModItems {
 
             itemGroup.add(ModBlocks.STARTING_LINE_BLOCK);
 
+            itemGroup.add(ModBlocks.JUMP_BLOCK);
+
             itemGroup.add(ModBlocks.GEYSER);
 
             itemGroup.add(ModItems.POOL_NOODLE);
