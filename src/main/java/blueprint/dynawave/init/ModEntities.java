@@ -17,10 +17,12 @@ public class ModEntities {
     public static final EntityType<SpinningBarEntity> SPINNING_BAR = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(MOD_ID, "spinning_bar"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MISC, SpinningBarEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.0f,1.0f)) // Default size, changable dynamically
-                    .trackRangeBlocks(64)
-                    .trackedUpdateRate(1)
-                    .build()
+            EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
+                    .setDimensions(1.0f,1.0f) // Default size, changable dynamically
+                    .build("spinning_bar")
     );
+
+    public static void initialize() {
+        // Register entity types here
+    }
 }
