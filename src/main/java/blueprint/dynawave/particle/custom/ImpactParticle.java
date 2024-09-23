@@ -12,9 +12,15 @@ public class ImpactParticle extends SpriteBillboardParticle {
         super(level, xCord, yCord, zCord, xd, yd, zd);
 
         this.velocityMultiplier = 0.6f;
-        this.x = xd;
-        this.y = yd;
-        this.z = zd;
+
+        this.x = xCord;
+        this.y = yCord;
+        this.z = zCord;
+
+        this.velocityX = xd;
+        this.velocityY = yd;
+        this.velocityZ = zd;
+
         this.scale *= 0.75f;
         this.maxAge = 20;
         this.setSpriteForAge(spriteSet);
@@ -22,7 +28,6 @@ public class ImpactParticle extends SpriteBillboardParticle {
         this.red = 1f;
         this.green = 1f;
         this.blue = 1f;
-
     }
 
     @Override

@@ -34,19 +34,15 @@ public class CoconutProjectile extends ThrownItemEntity {
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-        if(!this.getWorld().isClient) {
+        if (!this.getWorld().isClient) {
             entityHitResult.getEntity().damage(this.getDamageSources().thrown(this, this.getOwner()), 0.5F);
-            // Get the hit entity's location
             World world = this.getWorld();
+
             double x = entityHitResult.getEntity().getX();
-            double y = entityHitResult.getEntity().getBodyY(0.5); // Adjust as needed for the center of the entity
+            double y = entityHitResult.getEntity().getEyeY();
             double z = entityHitResult.getEntity().getZ();
 
-            // Add custom particles on hit
             ((ServerWorld) world).spawnParticles(ModParticles.IMPACT_PARTICLE, x, y, z, 10, 0.1, 0.1, 0.1, 0.01);
         }
-
-        this.discard();
-        super.onEntityHit(entityHitResult);
     }
 }
