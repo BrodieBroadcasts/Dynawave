@@ -5,6 +5,7 @@ import blueprint.dynawave.command.SpinningBarCommand;
 import blueprint.dynawave.init.ModBlocks;
 import blueprint.dynawave.init.ModEntities;
 import blueprint.dynawave.init.ModItems;
+import blueprint.dynawave.particle.ModParticles;
 import blueprint.dynawave.teams.TeamManager;
 import net.fabricmc.api.ModInitializer;
 
@@ -27,7 +28,8 @@ public class Dynawave implements ModInitializer {
 		SpinningBarCommand.register();
 		KillBarCommand.register();
 
-		// Register team management commands
+		ModParticles.registerParticles();
+
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
 			TeamManager.registerCommands(dispatcher);
 		});

@@ -30,7 +30,7 @@ public class CoconutItem extends Item {
         if (!world.isClient) {
             CoconutProjectile coconutProjectile = new CoconutProjectile(user, world);
             coconutProjectile.setItem(itemStack);
-            coconutProjectile.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 0F);
+            coconutProjectile.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
                         /*
                         coconutProjectile.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
                         In 1.17,we will use setProperties instead of setVelocity.

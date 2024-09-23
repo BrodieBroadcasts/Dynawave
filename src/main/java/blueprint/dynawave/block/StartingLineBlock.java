@@ -1,6 +1,5 @@
 package blueprint.dynawave.block;
 
-import blueprint.dynawave.course.RaceManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -29,9 +28,8 @@ public class StartingLineBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entity;
-            int checkpointType = state.get(CHECKPOINT); // Replace with your actual property
+            int checkpointType = state.get(CHECKPOINT);
 
-            RaceManager.getInstance().handleCheckpoint(player, checkpointType);
         }
         super.onSteppedOn(world, pos, state, entity);
     }

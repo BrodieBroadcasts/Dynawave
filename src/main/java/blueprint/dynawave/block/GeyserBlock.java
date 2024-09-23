@@ -79,8 +79,8 @@ public class GeyserBlock extends SlabBlock {
     }
 
     private void liftPlayer(PlayerEntity player) {
-        player.addVelocity(0, 1.5, 0); // Lift the player up slightly
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 80, 0, false, false)); // Slow fall for 4 seconds
+        player.addVelocity(0, 1.5, 0);
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 80, 0, false, false)); // Slow fall for 10 seconds
         player.velocityModified = true;
     }
 
