@@ -20,7 +20,6 @@ public class PoolNoodleItem extends Item {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (!attacker.getWorld().isClient && attacker.getEquippedStack(EquipmentSlot.MAINHAND).isOf(this)) {
             target.takeKnockback(1.5, attacker.getX() - target.getX(), attacker.getZ() - target.getZ());
-
             target.velocityModified = true;
         }
         return super.postHit(stack, target, attacker);

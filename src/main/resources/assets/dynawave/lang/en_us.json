@@ -25,7 +25,12 @@
 
   "block.dynawave.water_geyser": "Water Geyser",
 
+  "block.dynawave.jump_block": "Jump Block",
+
   "item.dynawave.pool_noodle": "Pool Noodle",
+  "enchantment.dynawave.knockback_noodle": "Knockback Noodle",
+
+  "item.dynawave.coconut": "Coconut",
 
   "itemGroup.dynawave": "Dynawave Group",
 

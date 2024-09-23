@@ -21,6 +21,11 @@ public class ModItems {
             "pool_noodle"
     );
 
+    public static final Item COCONUT = register(
+            new PoolNoodleItem(new FabricItemSettings().maxCount(16)),
+            "coconut"
+    );
+
     public static Item register(Item item, String id) {
         // Create the identifier for the item
         Identifier itemID = new Identifier(MOD_ID, id);
@@ -64,6 +69,8 @@ public class ModItems {
             itemGroup.add(ModBlocks.GEYSER);
 
             itemGroup.add(ModItems.POOL_NOODLE);
+
+            itemGroup.add(ModItems.COCONUT);
         });
     }
 

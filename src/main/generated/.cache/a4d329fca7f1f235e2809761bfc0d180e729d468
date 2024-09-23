@@ -1,6 +1,6 @@
-// 1.20.4	2024-09-23T14:14:19.9880663	Dynawave/Model Definitions
-4fe927f707e2880fd68bbc447f63e30e0ffad05e assets\dynawave\blockstates\dark_pool_block_slab.json
+// 1.20.4	2024-09-23T16:01:41.4556955	Dynawave/Model Definitions
 8d9b08535e0f33f5bd3c35f74799b775d29d8033 assets\dynawave\blockstates\pool_block_slab.json
+4fe927f707e2880fd68bbc447f63e30e0ffad05e assets\dynawave\blockstates\dark_pool_block_slab.json
 c465ed3ca2a3ae29643b1b75e3c4a578f6a19d21 assets\dynawave\blockstates\dark_pool_block_walls.json
 deaaf1b4b4d03a31ea9d36cef330e5b921d87781 assets\dynawave\models\block\pool_block.json
 be25f91bf79f9513cca1a71016ba0a3dddf7413c assets\dynawave\models\block\dark_pool_block_walls_inventory.json
@@ -13,8 +13,8 @@ f87733874d0fbf8cec12be07d3ec9e0e69a294cf assets\dynawave\models\block\pool_block
 a35a7e961244bee8102f4719babae7ae52ffceaf assets\dynawave\blockstates\red_pool_block.json
 e05cf0984c87c845180b376b722ac90b337704ed assets\dynawave\models\block\red_pool_block_walls_side.json
 1dcd9e484150efc39931f610ed3387d4c2edbb64 assets\dynawave\models\item\green_pool_block_walls.json
-a69e44f1951a56109e248f0abbabf786106bc169 assets\dynawave\models\item\green_pool_block.json
 f24bb34eb44c9c70119792d34b79e2fa60c1eb06 assets\dynawave\models\block\pool_block_stairs_outer.json
+a69e44f1951a56109e248f0abbabf786106bc169 assets\dynawave\models\item\green_pool_block.json
 9b1693777aa021cb63f54e0d653e4a4e605380b4 assets\dynawave\models\block\pool_block_slab_top.json
 562fa29a13ed8acbda039e3a311e6f3c24cc329e assets\dynawave\blockstates\red_pool_block_slab.json
 60c75443e86025beb1b58a0fd712d2eada1a43e6 assets\dynawave\blockstates\dark_pool_block.json
@@ -39,8 +39,8 @@ a556165f0217f2c7ab2c101a4aacbf281f6009e1 assets\dynawave\models\block\red_pool_b
 5fea395ea2335a4974aaf1b2719abe45185dc890 assets\dynawave\models\block\pool_block_walls_side_tall.json
 53508a4b66c092aef3f5ca0c9928169eab00c0de assets\dynawave\models\block\dark_pool_block_stairs_inner.json
 7511cd3a606fe1ba25bf9a043480ba3602fc0068 assets\dynawave\models\item\pool_block_walls.json
-e53b5f03e7d55391d541c5cec4568d54fc614503 assets\dynawave\models\item\pool_block.json
 4e2ed0a49ec6532ef4370885e657aba7f444c45d assets\dynawave\blockstates\green_pool_block_walls.json
+e53b5f03e7d55391d541c5cec4568d54fc614503 assets\dynawave\models\item\pool_block.json
 750b0596bfb91432cd25fd169e1d08af6906a741 assets\dynawave\models\block\pool_block_stairs.json
 7305d0faf3789562a5731ffd210497b11638cb9a assets\dynawave\models\block\jump_block.json
 4cdc688a2a57e35df5b001ce445af40e66276389 assets\dynawave\models\block\red_pool_block_stairs_inner.json

@@ -1,5 +1,6 @@
 package blueprint.dynawave.init;
 
+import blueprint.dynawave.entity.CoconutProjectile;
 import blueprint.dynawave.entity.SpinningBarEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -20,6 +21,14 @@ public class ModEntities {
             EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
                     .setDimensions(1.0f,1.0f) // Default size, changable dynamically
                     .build("spinning_bar")
+    );
+
+    public static final EntityType<CoconutProjectile> COCONUT_PROJECTILE = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(MOD_ID, "coconut_projectile"),
+            EntityType.Builder.<CoconutProjectile>create(CoconutProjectile::new, SpawnGroup.MISC)
+                    .setDimensions(0.25f, 0.25f)
+                    .build()
     );
 
     public static void initialize() {
