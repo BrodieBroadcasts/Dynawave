@@ -1,5 +1,6 @@
 package blueprint.dynawave.init;
 
+import blueprint.dynawave.item.CoconutItem;
 import blueprint.dynawave.item.PoolNoodleItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -22,7 +23,7 @@ public class ModItems {
     );
 
     public static final Item COCONUT = register(
-            new PoolNoodleItem(new FabricItemSettings().maxCount(16)),
+            new CoconutItem(new FabricItemSettings().maxCount(16)),
             "coconut"
     );
 
