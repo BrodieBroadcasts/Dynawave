@@ -23,6 +23,31 @@ public class ModEntities {
                     .build("spinning_bar")
     );
 
+        public static final EntityType<SpinningBarEntity> SMALL_SPINNING_BAR = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(MOD_ID, "small_spinning_bar"),
+            EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
+                    .setDimensions(1.0f,1.0f) // Default size, changable dynamically
+                    .build("small_spinning_bar")
+    );
+
+        public static final EntityType<SpinningBarEntity> MEDIUM_SPINNING_BAR = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(MOD_ID, "medium_spinning_bar"),
+            EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
+                    .setDimensions(1.0f,1.0f) // Default size, changable dynamically
+                    .build("medium_spinning_bar")
+    );
+
+        public static final EntityType<SpinningBarEntity> LARGE_SPINNING_BAR = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(MOD_ID, "large_spinning_bar"),
+            EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
+                    .setDimensions(1.0f,1.0f) // Default size, changable dynamically
+                    .build("large_spinning_bar")
+    );
+
+
     public static final EntityType<CoconutProjectile> COCONUT_PROJECTILE = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(MOD_ID, "coconut_projectile"),

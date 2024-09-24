@@ -1,7 +1,6 @@
 package blueprint.dynawave;
 
-import blueprint.dynawave.entity.client.ModModelLayers;
-import blueprint.dynawave.entity.client.SpinningEntityRenderer;
+import blueprint.dynawave.entity.client.*;
 import blueprint.dynawave.init.ModBlocks;
 import blueprint.dynawave.init.ModEntities;
 import blueprint.dynawave.particle.ModParticles;
@@ -19,6 +18,9 @@ public class DynawaveClient implements ClientModInitializer {
     public void onInitializeClient() {
         // Register entity renderer
         EntityRendererRegistry.register(ModEntities.SPINNING_BAR, SpinningEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.SMALL_SPINNING_BAR, SmallSpinningEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.MEDIUM_SPINNING_BAR, MediumSpinningEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.LARGE_SPINNING_BAR, LargeSpinningEntityRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.COCONUT_PROJECTILE, FlyingItemEntityRenderer::new);
 
