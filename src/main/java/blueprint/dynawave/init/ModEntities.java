@@ -2,10 +2,6 @@ package blueprint.dynawave.init;
 
 import blueprint.dynawave.entity.CoconutProjectile;
 import blueprint.dynawave.entity.SpinningBarEntity;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -35,7 +31,7 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             new Identifier(MOD_ID, "medium_spinning_bar"),
             EntityType.Builder.create(SpinningBarEntity::new, SpawnGroup.MISC)
-                    .setDimensions(1.0f,1.0f) // Default size, changable dynamically
+                    .setDimensions(2.0f,1.0f) // Default size, changable dynamically
                     .build("medium_spinning_bar")
     );
 
